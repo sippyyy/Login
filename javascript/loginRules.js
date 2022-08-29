@@ -37,6 +37,7 @@ const loginFunction = (captcha)=>{
                         
                                 loginFunction(res.captcha)
                             })
+                            changeKeys()
                         }else{
                             if(window.innerWidth >= 1080){
                             location.replace("http://10.1.43.207:9999/WebBroker/")

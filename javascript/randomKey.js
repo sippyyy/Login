@@ -35,37 +35,39 @@ const setSecondKey = (first,second)=>{
 }
 
 // end function
+const changeKeys = () =>{
+    const firstKeyLogin = Math.floor(Math.random()*keyRanges.length)
+    let secondKeyLogin = 'this is 2nd'
+    secondKeyLogin = setSecondKey(firstKeyLogin,secondKeyLogin)
+    
+    let currentKey1 = keyRanges[firstKeyLogin]
+    let currentKey2 = keyRanges[secondKeyLogin]
+    
+    
+    // Render first keycode and second keycode to login form for matrix code identification
+    
+    const firstKeyCode = document.querySelector('.form__code.left')
+    const secKeyCode = document.querySelector('.form__code.right')
+    
+    
+    
+    
+    firstKeyCode.value = keyRanges[firstKeyLogin]
+    secKeyCode.value = keyRanges[secondKeyLogin]
+    
+    
+    // Render first keycode and second keycode to help form
+    
+    const firstKeyHelp = Math.floor(Math.random()*keyRanges.length)
+    let secondKeyHelp = 'this is 2nd'
+    secondKeyHelp = setSecondKey(firstKeyHelp,secondKeyHelp)
+    
+    const firstKeyMatrix = document.querySelector('.form__code-help-left')
+    const secKeyMatrix = document.querySelector('.form__code-help-right')
+    
+    firstKeyMatrix.value =  keyRanges[firstKeyHelp]
+    secKeyMatrix.value = keyRanges[secondKeyHelp]
+}
 
-const firstKeyLogin = Math.floor(Math.random()*keyRanges.length)
-let secondKeyLogin = 'this is 2nd'
-secondKeyLogin = setSecondKey(firstKeyLogin,secondKeyLogin)
-
-let currentKey1 = keyRanges[firstKeyLogin]
-let currentKey2 = keyRanges[secondKeyLogin]
-
-
-// Render first keycode and second keycode to login form for matrix code identification
-
-const firstKeyCode = document.querySelector('.form__code.left')
-const secKeyCode = document.querySelector('.form__code.right')
-
-
-
-
-firstKeyCode.value = keyRanges[firstKeyLogin]
-secKeyCode.value = keyRanges[secondKeyLogin]
-
-
-// Render first keycode and second keycode to help form
-
-const firstKeyHelp = Math.floor(Math.random()*keyRanges.length)
-let secondKeyHelp = 'this is 2nd'
-secondKeyHelp = setSecondKey(firstKeyHelp,secondKeyHelp)
-
-const firstKeyMatrix = document.querySelector('.form__code-help-left')
-const secKeyMatrix = document.querySelector('.form__code-help-right')
-
-firstKeyMatrix.value =  keyRanges[firstKeyHelp]
-secKeyMatrix.value = keyRanges[secondKeyHelp]
-
+changeKeys()
 
