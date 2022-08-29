@@ -1,0 +1,214 @@
+.content{
+    height: 100%;
+}
+
+.row__right{
+    height: 100%;
+    align-items: center;
+}
+
+.form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form__header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--primary);
+    padding: 6px 0 ;
+}
+
+.form__img{
+    height: 30px;
+}
+
+.form__login{
+    background-color: var(--dark-primary);
+    padding: 10px 40px;
+    width: 100%;
+}
+
+#safe-code-login, #safe-code-help, #safe-code-signup-account,#safe-code-signup{
+    position: relative;
+    max-width: 150px;
+    height: 40px;
+    right:0;
+    background-color: var(--dark-primary);
+}
+
+.form__section{
+    display: flex;
+    flex-direction: column ;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+
+.form__input,.form__code{
+    background-color: var(--dark-primary);
+    border: 1px solid #404E68;
+    padding: 5px;
+    outline: none;
+    color: #fff;
+    flex:1;
+    max-height: 33px;
+}
+
+.form__onlyread{
+    text-align: center;
+    background-color: red;
+}
+
+.form__label{
+    margin-top: 15px;
+    margin-bottom:5px ;
+    background-color: unset;
+    border: unset;
+}
+
+.form__confirm_number{
+    flex:1;
+    background-color: var(--dark-primary);
+    border: 1px solid #404E68;
+    padding: 5px;
+    outline: none;
+}
+
+
+.form__code-group{
+    display: flex;
+}
+
+
+.form__code-container{
+    display: flex;
+    flex:1;
+    width: 30%;
+}
+
+
+.form__code{
+    display: flex;
+    max-width: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-l-primary);
+    color: #fff;
+}
+
+.form__safecode{
+    display: flex;
+    width: 100%;
+    height: 33px;
+    overflow: hidden;
+}
+
+
+.custom{
+    width: 100%;
+}
+
+.form__buttons{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__btn{
+    width: 47%;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0;
+}
+
+.form__sign-up{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: var(--bold);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.form__radios{
+    display: flex;
+}
+
+.form__radio{
+    position: relative;
+}
+
+.form__information{
+    position: absolute;
+    right:-20%;
+    top:15px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary);
+    color: var(--dark-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    font-size: 20px;
+    font-family:'Times New Roman', Times, serif;
+    cursor:pointer;
+}
+
+.form__radio + .form__radio{
+    margin-left: 40px;
+}
+
+.form__section.hide{
+    display: none;
+}
+
+.form__virtual_keys{
+    display: none;
+}
+
+@media (max-width: 321px) {
+    .form__login{
+        padding: 10px;
+    }
+
+    .form__label{
+        margin: 5px 0;
+    }
+
+    .form__section{
+        margin: 0;
+    }
+
+    .form__buttons{
+        padding: 10px 0;
+    }
+
+    .form__code{
+        margin: 0;
+    }
+
+    .form__code-sample{
+        margin: 0;
+    }
+    
+}
+
+canvas{
+    background-color: var(--dark-l-primary) !important;
+}
+
+
+
+

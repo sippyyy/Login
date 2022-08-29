@@ -1,0 +1,275 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hệ Thống Giao dịch Môi giới Chứng Khoán Rồng Việt</title>
+    <link rel="stylesheet" href="./assets/style/bootstap_css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/style/main.css">
+    <link rel="stylesheet" href="./assets/style/base.css">
+    <link rel="stylesheet" href="./assets/style/header.css">
+    <link rel="stylesheet" href="./assets/style/form.css">
+    <link rel="stylesheet" href="./assets/style/footer.css">
+    <link rel="stylesheet" href="./assets/style/warning.css"> 
+    <link rel="stylesheet" href="./assets/style/fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" />
+    <script src="./javascript/jquery.js"></script>
+  </head>
+  <body>
+    <div class="main">
+
+        <div class="header">
+            <div class="container header__container">
+                <div class="header__left">
+                    <h1 class="header__logo">
+                        <img src="./assets/img/logo_rongviet.png" alt="" class="header__logo-img">
+                    </h1>
+                </div>
+                <div class="header__right">
+                    <div class="header__moment">
+                        <span class="header__time header__time-date">26/07/2022</span>
+                        <span class="header__time header__time-time">26/07/2022</span>
+                    </div>
+                    <a href="#" class="header__language ">EN</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container content">
+
+            <div class="row row__right">
+                <div class="form col-lg-5 col-md-6">
+                    <div class="form__header">
+                        <img src="./assets/img/broker_dragon_logo.png" alt="" class="form__img">
+                    </div>
+                    <form action="" class="form__login">
+                        <div class="form__section">
+                            <label for="username" class="form__label">Tên đăng nhập:</label>
+                            <input type="text" id="username" name="mvUserName" class="form__input">
+                        </div>
+                        <div class="form__section">
+                            <label for="password" class="form__label">Mật khẩu:</label>
+                            <input type="password" id="password" name="mvUserPwd" class="form__input">
+                        </div>
+
+                        <div class="form__radios">
+                            <div class="form__radio">
+                                <input type="radio" checked class="form__input" value="CARD" id="matrix" name="mvOTPType">
+                                <label class="form__label"  for="matrix">Thẻ ma trận</label>
+                            </div>
+                            <div class="form__radio">
+                                <input type="radio" class="form__input" id="otp" value="TOTP" name="mvOTPType">
+                                <label class="form__label" for="otp">Smart OTP</label>
+                                <p class="form__information"><i class="fa-solid fa-info"></i></p>
+                            </div>
+                        </div>
+                        <div class="form__section form__section-options">
+                            <label for="idencode" class="form__label">Mã xác thực:</label>
+                            <div class="form__code-group">
+                                <div class="form__code-container">
+                                    <input value="C2" name="mvTxtKey01" disabled class="form__code form__input left form__onlyread"></input>
+                                    <input id="code" name="mvTxtValue01" class="form__input custom"></input>
+                                </div>
+                                <div class="form__code-container">
+                                    <input id="code1" name="mvTxtValue02" class="form__input custom"></input>
+                                    <input value="C2" name="mvTxtKey02" disabled class="form__input form__code right form__onlyread"></input>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form__section">
+                            <label for="safecode1" class="form__label">Mã an toàn:</label>
+                            <div class="form__safecode login">
+                                <input type="text" id="safecode1" name="mvSecurities" class="form__input">
+                                <canvas id="safe-code-login" class="form__code-sample"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="form__buttons">
+                            <p class="form__btn form__btn-forget dark">Quên mật khẩu?</p>
+                            <button class="form__btn primary">Đăng nhập</button>
+                        </div>
+                        <p class="form__sign-up">Đăng ký phương thức xác thực</p>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="help hide">
+            <div class="help__container container">
+                <div class="help__noti">
+                    <h3 class="help__heading">
+                        QUÊN MẬT KHẨU
+                    </h3>
+                    <form action="" class="form__forget">
+                        <div class="form__section">
+                            <label for="username" class="form__label">Tên đăng nhập:</label>
+                            <input type="text" id="user_name" name="mvUserName" class="form__input">
+                        </div>
+
+                        <div class="form__radios">
+                            <div class="form__radio">
+                                <input type="radio" checked class="form__input" value="CARD" id="matrix_option" name="mvOTPType">
+                                <label class="form__label"  for="matrix_option">Thẻ ma trận</label>
+                            </div>
+                            <div class="form__radio">
+                                <input type="radio" class="form__input" id="otp_option" value="TOTP" name="mvOTPType">
+                                <label class="form__label" for="otp_option">Smart OTP</label>
+                            </div>
+                        </div>
+                        <div class="form__section form__section-help">
+                            <label for="idencode" class="form__label">Mã xác thực:</label>
+                            <div class="form__code-group">
+                                <div class="form__code-container">
+                                    <input value="C2" name="mvTxtKey01" disabled class="form__code form__input form__code-help-left left form__onlyread"></input>
+                                    <input id="leftcodehelp" name="mvTxtValue01" class="form__input custom"></input>
+                                </div>
+                                <div class="form__code-container">
+                                    <input id="rightcodehelp" name="mvTxtValue02" class="form__input custom"></input>
+                                    <input value="C2" name="mvTxtKey02" disabled class="form__input form__code-help-right form__code right form__onlyread"></input>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form__section">
+                            <label for="safecode" class="form__label">Mã an toàn:</label>
+                            <div class="form__safecode">
+                                <input type="text" id="safecode2" name="mvSecurities" class="form__input">
+                                <canvas id="safe-code-help" class="form__code-sample"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="form__buttons">
+                            <p class="form__btn help__btn">Hủy bỏ</p>
+                            <button class="form__btn primary">Tạo mật khẩu</button>
+                        </div>
+                        <p class="form__sign-up">Đăng ký phương thức xác thực</p>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="signup hide">
+            <div class="signup__container container">
+                <div class="signup__noti">
+                    <h3 class="signup__heading">
+                        ĐĂNG KÝ PHƯƠNG THỨC XÁC THỰC
+                    </h3>
+                    <div class="signup__content">
+                        <ul class="signup__nav">
+                            <li class="signup__item signup__item-matrix active">THẺ MA TRẬN</li>
+                            <li class="signup__item signup__item-account">SMART OTP</li>
+                        </ul>
+                        <div class="signup__section signup__section-matrix active">
+                            <p class="signup__desc">Điều kiện để Anh/Chị có thể sử dụng Phương thức xác thực Thẻ ma trận cho brokerDragon:</br>
+                                1. Có Tài khoản chứng khoán tại Rồng Việt và được cấp Thẻ ma trận.</br>
+                                2. Cung cấp thông tin Tên đăng nhập và Số Thẻ ma trận để đăng ký xác thực đăng nhập brokerDragon bằng Thẻ ma trận.</br>
+                            </p>
+
+                            <form action="" class="form__matrix">
+                                <div class="form__section">
+                                    <label for="username3" class="form__label">Tên đăng nhập:</label>
+                                    <input type="text" id="username3" name="mvUserName" class="form__input">
+                                </div>
+                                <div class="form__section">
+                                    <label data-value="CARD" data-name="mvMethodType" for="matrixcode" class="form__label form__input">Số thẻ ma trận:</label>
+                                    <input type="text" id="matrixcode" name="mvMethodNumber" class="form__input">
+                                </div>
+        
+                                <div class="form__section">
+                                    <label for="safecode" class="form__label">Mã an toàn:</label>
+                                    <div class="form__safecode">
+                                        <div class="form__safecode">
+                                            <input type="text" id="safecode" name="safecode" class="form__confirm_number">
+                                            <canvas id="safe-code-signup" class="form__code-sample"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="form__buttons">
+                                    <button class="form__btn form__btn-forget primary">Đăng ký</button>
+                                    <p class="form__btn form__btn-cancel dark">Hủy bỏ</p>
+                                </div>
+        
+                            </form>
+
+                        </div>
+
+                        <div class="signup__section signup__section-card">
+                            <p class="signup__desc">Điều kiện để Anh/Chị có thể sử dụng Phương thức xác thực Smart OTP cho brokerDragon:</br>
+                                1. Có Tài khoản chứng khoán tại Rồng Việt và đã đăng ký sử dụng Phương thức xác thực Smart OTP trên app iDragon.</br>
+                                2. Cung cấp thông tin Tài khoản chứng khoán và Tên đăng nhập* để đăng ký xác thực đăng nhập brokerDragon bằng Smart OTP.</br>
+                                *Lưu ý: Tài khoản chứng khoán và Tên đăng nhập phải cùng tên.
+                            </p>
+
+                            <form action="" class="form__otp">
+                                <div class="form__section">
+                                    <label for="username4" class="form__label">Tên đăng nhập:</label>
+                                    <input type="text" id="username4" name="mvUserName" class="form__input">
+                                </div>
+                                <div class="form__section">
+                                    <label data-value="ACCOUNT" for="account" data-name="mvMethodType" class="form__label form__input">Tài khoản chứng khoán:</label>
+                                    <input value="033C" type="text" id="account" name="mvMethodNumber" class="form__input">
+                                </div>
+        
+                                <div class="form__section">
+                                    <label for="safecode3" class="form__label">Mã an toàn:</label>
+                                    <div class="form__safecode">
+                                        <input type="text" id="safecode3" name="securitycodeReg" class="form__confirm_number">
+                                        <canvas id="safe-code-signup-account" class="form__code-sample"></canvas>
+                                    </div>
+                                </div>
+        
+                                <div class="form__buttons">
+                                    <button class="form__btn primary">Đăng ký</button>
+                                    <p class="form__btn form__btn-cancel dark">Hủy bỏ</p>
+                                </div>
+        
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="warning hide">
+            <div class="warning__container container">
+                <div class="warning__noti">
+                    <h3 class="warning__heading">
+                        THÔNG BÁO
+                    </h3>
+                    <div class="warning__content">
+                        <div class="warning__desc">
+                            <p class="warning__desc-content">Vui lòng nhập mã an toàn</p>
+                        </div>
+                        <button class="warning__button primary">Đóng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="footer__container container">
+                <p class="footer__content">
+                    © 2021 - Bản quyền của Công ty Cổ phần Chứng khoán Rồng Việt
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="./javascript/bootstrap_js/bootstrap.js"></script>
+    <script src="./javascript/randomKey.js"></script>
+    <script src="./javascript/index.js"></script>
+    <script src="./javascript/validation.js"></script>
+    <script src="./javascript/loginRules.js"></script>
+    <script src="./javascript/helpRules.js"></script>
+    <script src="./javascript/registerAccountRules.js"></script>
+    <script src="./javascript/registerCardRules.js"></script>
+  </body>
+</html>

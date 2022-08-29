@@ -1,0 +1,11 @@
+.main{
+    background-image: url("../img/bg.jpg") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    left: 0;
+    right:0;
+    top:0;
+    bottom:0;
+}
