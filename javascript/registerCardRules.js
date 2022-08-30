@@ -24,10 +24,15 @@ const signUpCardValidation = (captcha)=>{
                 type: 'POST',
                 success:  function(result){
                     if(result.jsonObj.success === false){
+                        ctxSafeCodeSignUp.clearRect(0,0,safeCodeSignUpCard.width,safeCodeSignUpCard.height)
+                        $.get('/WebBroker/login/genCaptcha.do',function(res){
+                            signUpCardValidation(res.captcha)
+                        })
                         warning.classList.remove('hide')
                         warningMsg.textContent = result.jsonObj.message
                     }else{
-                        console.log(result.json.success)
+                        warning.classList.remove('hide')
+                        warningMsg.textContent = result.jsonObj.message
                     }
                 },
                 error: function(error){
@@ -38,7 +43,7 @@ const signUpCardValidation = (captcha)=>{
     })
 }
 
-openSignup.forEach((button, index) => {
+openSignup.forEach((button) => {
     button.onclick = function () {
         if(matrix === true){
             $.get('/WebBroker/login/genCaptcha.do',function(res){

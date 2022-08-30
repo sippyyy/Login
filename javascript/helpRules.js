@@ -32,6 +32,7 @@ helpOpenBtn.onclick= function(){
                         warning.classList.remove('hide')
                         warningMsg.textContent = result.jsonObj.message
                     }else{
+                        changeKeys()
                         warning.classList.remove('hide')
                         warningMsg.textContent = result.jsonObj.message
                     }

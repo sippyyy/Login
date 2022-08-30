@@ -78,6 +78,7 @@
     border: 1px solid #404E68;
     padding: 5px;
     outline: none;
+    color: var(--white);
 }
 
 
@@ -95,11 +96,12 @@
 
 .form__code{
     display: flex;
-    max-width: 40px;
+    width: 30%;
     justify-content: center;
     align-items: center;
     background-color: var(--dark-l-primary);
     color: #fff;
+    text-align: center;
 }
 
 .form__safecode{
@@ -112,6 +114,8 @@
 
 .custom{
     width: 100%;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .form__buttons{
@@ -153,17 +157,21 @@
     position: absolute;
     right:-20%;
     top:15px;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     background-color: var(--primary);
     color: var(--dark-primary);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 100%;
-    font-size: 20px;
+    font-size: 14px;
     font-family:'Times New Roman', Times, serif;
     cursor:pointer;
+}
+
+.form__info{
+    transform: translate(-0.8px, 1px);
 }
 
 .form__radio + .form__radio{

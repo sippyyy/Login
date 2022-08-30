@@ -44,7 +44,11 @@ const Validator = (options)=>{
                             if(inputElement.type === 'radio' && inputElement.checked === true){
                                 result[inputElement.name] = inputElement.value
                             } else if( inputElement.type === 'text' || inputElement.type === 'password'){
-                                result[inputElement.name] = inputElement.value
+                                if(inputElement.name === 'mvTxtValue01' || inputElement.name === 'mvTxtValue02'){
+                                    result[inputElement.name] = inputElement.value.toUpperCase()
+                                }else{
+                                    result[inputElement.name] = inputElement.value
+                                }
                             }
     
                         })

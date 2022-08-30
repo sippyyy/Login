@@ -35,13 +35,17 @@ const setSecondKey = (first,second)=>{
 }
 
 // end function
+
+let currentKey1 = ''
+let currentKey2 = ''
+
 const changeKeys = () =>{
     const firstKeyLogin = Math.floor(Math.random()*keyRanges.length)
     let secondKeyLogin = 'this is 2nd'
     secondKeyLogin = setSecondKey(firstKeyLogin,secondKeyLogin)
     
-    let currentKey1 = keyRanges[firstKeyLogin]
-    let currentKey2 = keyRanges[secondKeyLogin]
+    currentKey1 = keyRanges[firstKeyLogin]
+    currentKey2 = keyRanges[secondKeyLogin]
     
     
     // Render first keycode and second keycode to login form for matrix code identification
@@ -67,6 +71,8 @@ const changeKeys = () =>{
     
     firstKeyMatrix.value =  keyRanges[firstKeyHelp]
     secKeyMatrix.value = keyRanges[secondKeyHelp]
+
+    return currentKey1,currentKey2
 }
 
 changeKeys()

@@ -80,7 +80,11 @@ const loginFunction = (captcha)=>{
                             warning.classList.remove('hide')
                             warningMsg.textContent = result.message
                         }else{
-                            console.log(result)
+                            if(window.innerWidth >= 1080){
+                                location.replace("http://10.1.43.207:9999/WebBroker/")
+                            }else{
+                                location.replace("http://10.1.43.207:9999/WebBroker/html/")
+                            }
                         }
                     },
                     error: function(result){
@@ -120,7 +124,11 @@ const loginFunction = (captcha)=>{
                             warning.classList.remove('hide')
                             warningMsg.textContent = result.message
                         }else{
-                            console.log(result)
+                            if(window.innerWidth >= 1080){
+                                location.replace("http://10.1.43.207:9999/WebBroker/")
+                            }else{
+                                location.replace("http://10.1.43.207:9999/WebBroker/html/")
+                            }
                         }
                     },
                     error: function(result){

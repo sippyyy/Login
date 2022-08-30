@@ -26,8 +26,13 @@ const signUpAccountValidation = (captcha)=>{
                     if(result.jsonObj.success === false){
                         warning.classList.remove('hide')
                         warningMsg.textContent = result.jsonObj.message
+                        ctxSignupAccount.clearRect(0,0,safeCodeSignUpAccount.width,safeCodeSignUpAccount.height)
+                        $.get('/WebBroker/login/genCaptcha.do',function(res){
+                            signUpAccountValidation(res.captcha)
+                        })
                     }else{
-                        console.log(result.json.success)
+                        warning.classList.remove('hide')
+                        warningMsg.textContent = result.jsonObj.message
                     }
                 },
                 error: function(error){

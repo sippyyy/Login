@@ -117,6 +117,7 @@ const otpOption = document.getElementById('otp')
 
 // handle change content options - login form
 
+
 const optionContent = document.querySelector('.form__section-options')
 
 otpOption.onclick = function () {
@@ -129,7 +130,7 @@ otpOption.onclick = function () {
     </div>
 
     <label for="code" class="form__label">Mã OTP:</label>
-    <input type="text" id="otpCode" name="mvOTPcode" class="form__input">
+    <input type="text" id="otpCode" name="mvOTPCode" class="form__input">
 
     `
 }
@@ -198,7 +199,7 @@ otpOptionHelp.onchange = function () {
     optionContentHelp.innerHTML = `
     <div class="form__section">
         <label for="otpCode" class="form__label">Mã OTP:</label>
-        <input type="text" id="otpCode" name="mvOTPcode" class="form__input">
+        <input type="text" id="otpCode" name="mvOTPCode" class="form__input">
     </div>
     `
 }

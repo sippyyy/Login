@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0" />
     <title>Hệ Thống Giao dịch Môi giới Chứng Khoán Rồng Việt</title>
     <link rel="stylesheet" href="./assets/style/bootstap_css/bootstrap.css">
     <link rel="stylesheet" href="./assets/style/main.css">
@@ -51,7 +51,7 @@
                         </div>
                         <div class="form__section">
                             <label for="password" class="form__label">Mật khẩu:</label>
-                            <input type="password" id="password" name="mvUserPwd" class="form__input">
+                            <input type="password" autocomplete id="password" name="mvUserPwd" class="form__input">
                         </div>
 
                         <div class="form__radios">
@@ -62,7 +62,9 @@
                             <div class="form__radio">
                                 <input type="radio" class="form__input" id="otp" value="TOTP" name="mvOTPType">
                                 <label class="form__label" for="otp">Smart OTP</label>
-                                <p class="form__information"><i class="fa-solid fa-info"></i></p>
+                                <div class="form__information">
+                                    <span class="form__info">🛈</span>
+                                </div>
                             </div>
                         </div>
                         <div class="form__section form__section-options">
